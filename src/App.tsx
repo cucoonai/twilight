@@ -17,7 +17,7 @@ function App() {
           <span className="header__title">Cucoon AI</span>
         </a>
         <a
-          href="https://x.com"
+          href="https://x.com/daksh__verma"
           target="_blank"
           rel="noopener noreferrer"
           className="header__connect"
