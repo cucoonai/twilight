@@ -11,6 +11,11 @@ function XIcon() {
 function App() {
   return (
     <>
+      <div className="bg-motion" aria-hidden>
+        <div className="bg-motion__blob bg-motion__blob--1" />
+        <div className="bg-motion__blob bg-motion__blob--2" />
+        <div className="bg-motion__blob bg-motion__blob--3" />
+      </div>
       <header className="header">
         <a href="/" className="header__brand" aria-label="Cucoon AI home">
           <img src={logo} alt="" className="header__logo" width={28} height={28} />
