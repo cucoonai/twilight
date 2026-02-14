@@ -96,9 +96,17 @@ body {
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
+  line-height: 1;
   padding: 0.4rem 0.75rem;
   border-radius: var(--radius);
   transition: color 0.2s ease, background 0.2s ease;
+}
+
+.header__connect svg {
+  display: block;
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 .header__connect:hover {

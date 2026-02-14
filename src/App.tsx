@@ -14,7 +14,7 @@ function App() {
       <header className="header">
         <a href="/" className="header__brand" aria-label="Cucoon AI home">
           <img src={logo} alt="" className="header__logo" width={28} height={28} />
-          <span className="header__title">Cucoon AI</span>
+          <span className="header__title">cucoon</span>
         </a>
         <a
           href="https://x.com/daksh__verma"
@@ -31,13 +31,11 @@ function App() {
       <main className="landing" role="main">
         <span className="landing__badge" aria-hidden>Coming soon</span>
         <h1 className="landing__title">
-          <span className="landing__title-line">Ship at the Speed of</span>
-          <span className="landing__title-line">Thought</span>
+          <span className="landing__title-line">Build your AI Workforce</span>
         </h1>
         <p className="landing__description">
           Transform your project roadmaps into autonomous execution engines. Define
-          the mission, monitor the progress, and tweak agent logic on the fly to
-          hit your milestones faster than ever.
+          the mission, Monitor the progress.
         </p>
         <div className="landing__line" aria-hidden />
       </main>
