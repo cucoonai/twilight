@@ -159,7 +159,7 @@ body {
 }
 
 .header__title {
-  font-family: var(--font);
+  font-family: 'Righteous', var(--font);
 }
 
 .header__connect {
