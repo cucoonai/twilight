@@ -281,9 +281,6 @@ function App() {
       <main className="main-content">
         {/* Hero Section */}
         <section className="hero fade-in-up">
-          <div className="hero__logo">
-            <img src={logo} alt="CUCOON Logo" />
-          </div>
           <h1 className="hero__title">
             Your AI Workforce,<br />on Slack.
           </h1>
@@ -299,7 +296,7 @@ function App() {
               className="btn-primary"
             >
               Connect
-              <span className="material-symbols-outlined">arrow_forward</span>
+              <span className="material-symbols-outlined btn-primary__arrow">arrow_forward</span>
             </a>
           </div>
         </section>
@@ -355,6 +352,72 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* FAQ */}
+      <section className="faq fade-in-up" id="faq">
+        <div className="faq__inner">
+          <div className="faq__heading">
+            <h2 className="faq__title">Frequently Asked Questions</h2>
+          </div>
+          <div className="faq__list">
+            <div className="faq__item">
+              <details>
+                <summary>
+                  <span className="faq__question">How secure are the sandboxed agents?</span>
+                  <span className="material-symbols-outlined faq__icon">keyboard_arrow_down</span>
+                </summary>
+                <div className="faq__answer">
+                  Every agent runs in a completely isolated gVisor-based container. They have no access to your host system or other agents unless explicitly granted via our secure SDK.
+                </div>
+              </details>
+            </div>
+            <div className="faq__item">
+              <details>
+                <summary>
+                  <span className="faq__question">Does Nest require a Slack admin to install?</span>
+                  <span className="material-symbols-outlined faq__icon">keyboard_arrow_down</span>
+                </summary>
+                <div className="faq__answer">
+                  Yes, initial installation requires Slack workspace admin permissions to create the app and manage channel access. Once installed, individual users can interact with agents based on the permissions you set.
+                </div>
+              </details>
+            </div>
+            <div className="faq__item">
+              <details>
+                <summary>
+                  <span className="faq__question">Can I build agents using my own LLM keys?</span>
+                  <span className="material-symbols-outlined faq__icon">keyboard_arrow_down</span>
+                </summary>
+                <div className="faq__answer">
+                  Absolutely. Our Custom SDK allows you to bring your own API keys for OpenAI, Anthropic, or local models via MCP, or use our managed infrastructure.
+                </div>
+              </details>
+            </div>
+            <div className="faq__item">
+              <details>
+                <summary>
+                  <span className="faq__question">How does the pricing work for custom agents?</span>
+                  <span className="material-symbols-outlined faq__icon">keyboard_arrow_down</span>
+                </summary>
+                <div className="faq__answer">
+                  Custom agents are billed based on your specific infrastructure needs and usage patterns. We offer flexible plans for both individual developers and enterprise teams.
+                </div>
+              </details>
+            </div>
+            <div className="faq__item">
+              <details>
+                <summary>
+                  <span className="faq__question">What is MCP support?</span>
+                  <span className="material-symbols-outlined faq__icon">keyboard_arrow_down</span>
+                </summary>
+                <div className="faq__answer">
+                  Model Context Protocol (MCP) is an open standard that allows our agents to connect to your data sources (like Google Drive, GitHub, or internal DBs) without writing custom integration code for every agent.
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="footer">
