@@ -298,6 +298,15 @@ function App() {
               Connect
               <span className="material-symbols-outlined btn-primary__arrow">arrow_forward</span>
             </a>
+            <button
+              className="btn-waitlist"
+              data-tally-open="zxgW7q"
+              data-tally-layout="modal"
+              data-tally-hide-title="1"
+              data-tally-auto-close="3000"
+            >
+              Join the Waitlist
+            </button>
           </div>
         </section>
 
