@@ -254,6 +254,11 @@ function App() {
       <ShaderBackground />
       <div className="bg-grid" aria-hidden="true" />
 
+      {/* Top Left Logo */}
+      <header className="header-logo">
+        <img src="/nests-logo.png" alt="Nest Logo" className="header-logo__img" />
+      </header>
+
       {/* Main Content */}
       <main className="main-content">
         {/* Hero Section */}
