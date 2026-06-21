@@ -215,8 +215,23 @@ const features = [
 
 function App() {
   const trackRef = useRef<HTMLDivElement>(null)
+  const headerLogoRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
+    // Hide logo on scroll
+    let lastScrollY = 0
+    function handleScroll() {
+      const header = headerLogoRef.current
+      if (!header) return
+      if (window.scrollY > 50) {
+        header.classList.add('header-logo--hidden')
+      } else {
+        header.classList.remove('header-logo--hidden')
+      }
+      lastScrollY = window.scrollY
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
     // Intersection observer for fade-in animations
     const observer = new IntersectionObserver(
       (entries) => {
@@ -245,7 +260,10 @@ function App() {
       })
     }
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return (
@@ -255,7 +273,7 @@ function App() {
       <div className="bg-grid" aria-hidden="true" />
 
       {/* Top Left Logo */}
-      <header className="header-logo">
+      <header className="header-logo" ref={headerLogoRef}>
         <img src="/nests-logo.png" alt="Nest Logo" className="header-logo__img" />
       </header>
 

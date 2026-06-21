@@ -107,6 +107,13 @@ body {
   z-index: 50;
   width: 100%;
   padding: 0 var(--margin-mobile);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-logo--hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {
